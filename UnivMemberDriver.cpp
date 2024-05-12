@@ -3,6 +3,7 @@
 #include <iostream>
 #include <algorithm> //Googled How to Do To Lower (Use Transform Function)
 #include "UnivMember.h"
+#include "UnivStudent.h"
 using namespace std;
 
 int main()
@@ -10,10 +11,12 @@ int main()
     //Initalize Variables
 
     string currentLine;                 // Current Line we are reading
-    vector<UnivMember> uniMemberList;   // A Vector of Members of Class, UnivMemeber
+    vector<UnivMember> uniProfessorList;// A Vector of Members of Class, UnivMemeber
+    vector<UnivStudent> uniStudentList; // A Vector of Members of Class, UnivMemeber
     vector<string> usernameFileVector;  // A Vector to store Usernames to be Compared before Stored in File
     string tempUsername;                // Initalize Temp Username for Comparison Use
-    int ProfessorCounter = 0;           // Number of Professors That Must be Skipped Since Professors are Processed Before Students
+    string gpaString = "0";             // String Form of GPA
+    double gpaValue = 0;                // Then Converted to Double
     int usernameCounter = 0;            // Number of Same Usernamer ; Initalized Now And Used Later
 
     // START OF PROFESSOR SECTION OF CODE ////////////////////////////////
@@ -32,9 +35,8 @@ int main()
     {
         Name profName(currentLine); //Calling Default Name Constructor
         ID profID;                  // Calling Default ID Constructor
-        UnivMember newProf(profID, profName, "Prof");
-        uniMemberList.push_back(newProf);
-        ProfessorCounter++;
+        UnivMember newProf(profID, profName, "Professor");
+        uniProfessorList.push_back(newProf);
     }
 
     profFile.close();
@@ -42,7 +44,7 @@ int main()
     // ENDS OF PROFESSOR SECTION OF CODE ////////////////////////////////
 
     // STARTS OF STUDENT SECTION OF CODE ////////////////////////////////
-
+    
     ifstream studFile("StudentsLastFirst.txt");
 
     // Check if file is really open to avoid errors
@@ -54,10 +56,12 @@ int main()
 
     while (getline(studFile, currentLine))
     {
+        gpaString = currentLine.substr((currentLine.find('-') + 1), (currentLine.length() - currentLine.find('-')));
+        gpaValue = stod(gpaString);
         Name studName(currentLine); // Calling Default Name Constructor
         ID studID;                  // Calling Default ID Constructor
-        UnivMember newStud(studID, studName, "Student");
-        uniMemberList.push_back(newStud);
+        UnivStudent newStud(studID, studName, "Student", gpaValue);
+        uniStudentList.push_back(newStud);
     }
 
     // BEGINNING OF MAKING STUDENT USERNAMES //////////////////////////
@@ -67,7 +71,7 @@ int main()
     studFile.seekg(0, ios::beg);
 
     //Open Output File (Use fstream to handle Read AND Write)
-    ofstream usernameFileOut("StudentUsernames.txt");
+    ofstream usernameFileOut("MembersOutput.txt");
 
     // Check if file is really open to avoid errors
     if (!usernameFileOut.is_open())
@@ -82,7 +86,6 @@ int main()
 
         // Where Usernames are Made
         int commaPosition = currentLine.find(",");  // Find Comma Position
-        int lastPosition = currentLine.length();    // Find Last Letter Position
         string fIntial = currentLine.substr((commaPosition + 1), 1);
         string Lname = currentLine.substr(0, commaPosition);
         string currentUsername = fIntial + Lname;
@@ -122,28 +125,25 @@ int main()
         usernameFileVector.push_back(currentUsername);
     }
 
-    //Overload Output To File
+    //Overload Output To File (Professors then Students Who Have an ID and a GPA)
+
+    usernameFileOut << "\n=====Professors======\n";
+    for (int i = 0; i < uniProfessorList.size(); i++)
+    {
+        usernameFileOut << uniProfessorList[i] << endl;
+    }
+
+    usernameFileOut << "\n=====Students=====\n";
     for (int i = 0; i < (usernameFileVector.size()); i++)
     {
-        usernameFileOut << usernameFileVector[i] << uniMemberList[i + ProfessorCounter];
+        usernameFileOut << uniStudentList[i] << usernameFileVector[i] << " : \n";
     }
 
-
-    // Programs Old Output
-
-    /*
-    for (UnivMember Member : uniMemberList)
-    {
-        //Member.UnivMember::printMember();
-    }
-    */
-
-    cout << "Program Output is to File 'StudentUsernames.txt'";
 
     studFile.close();
     usernameFileOut.close();
 
     // END OF STUDENT SECTION OF CODE
-
+    
     return 0;
 }

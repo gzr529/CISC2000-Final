@@ -1,0 +1,89 @@
+
+=====Professors======
+Abdullah Al Hayajneh : A10000000 : Professor : 
+Robert Alpert : A10000001 : Professor : 
+Tamer Aly : A10000002 : Professor : 
+Mohammad Ruhul Amin : A10000003 : Professor : 
+Silvio Balzano : A10000004 : Professor : 
+Zakirul Alam Bhuiyan : A10000005 : Professor : 
+Sharang Biswas : A10000006 : Professor : 
+Alim R. Buksh : A10000007 : Professor : 
+Juntao Chen : A10000008 : Professor : 
+Sanchuan Chen : A10000009 : Professor : 
+Zhixiong Chen : A10000010 : Professor : 
+Meredith N. Finkelstein : A10000011 : Professor : 
+Stephen R. Flatley : A10000012 : Professor : 
+Thaier S. Hayajneh : A10000013 : Professor : 
+Dakota J. Hernandez : A10000014 : Professor : 
+Derbiau F. Hsu : A10000015 : Professor : 
+Zhou Ji : A10000016 : Professor : 
+Andrew H. Johnston : A10000017 : Professor : 
+Michael M. Kadri : A10000018 : Professor : 
+Samuel N. Kamens : A10000019 : Professor : 
+Stephen L. Keeley : A10000020 : Professor : 
+Nikitas P. Kounavelis : A10000021 : Professor : 
+Daniel D. Leeds : A10000022 : Professor : 
+Yosef Lehrman : A10000023 : Professor : 
+Yanjun Li : A10000024 : Professor : 
+Zigeng Liu : A10000025 : Professor : 
+Tzer Hung Low : A10000026 : Professor : 
+Ying Mao : A10000027 : Professor : 
+Subramaniam S. Palamadai : A10000028 : Professor : 
+George J. Pefanis : A10000029 : Professor : 
+Kyle J. Ryan : A10000030 : Professor : 
+Rolf J. Ryham : A10000031 : Professor : 
+Marlon A. Seaton : A10000032 : Professor : 
+Dylan S. Smith : A10000033 : Professor : 
+Tadeusz Strzemecki : A10000034 : Professor : 
+Samuel E. Sultan : A10000035 : Professor : 
+Amir Toliyat : A10000036 : Professor : 
+Karen I. Trovato : A10000037 : Professor : 
+David S. Wei : A10000038 : Professor : 
+Wenqi Wei : A10000039 : Professor : 
+Gary M. Weiss : A10000040 : Professor : 
+Kenneth G. Wolf : A10000041 : Professor : 
+Evan R. Wood : A10000042 : Professor : 
+Yijun Zhao : A10000043 : Professor : 
+Martine M. Zilversmit : A10000044 : Professor : 
+
+=====Students=====
+Miley Cyrus : A10000045 : Student : 3.05 : mcyrus : 
+Lady Gaga : A10000046 : Student : 3 : lgaga : 
+Ariana Grande : A10000047 : Student : 2.68 : agrande : 
+Alicia Keys : A10000048 : Student : 3.24 : akeys : 
+Bruno Mars : A10000049 : Student : 3.99 : bmars : 
+Ed Sheeran : A10000050 : Student : 2.93 : esheeran : 
+Harry Stiles : A10000051 : Student : 3.03 : hstiles : 
+Taylor Swift : A10000052 : Student : 3.02 : tswift : 
+Riley Robinson : A10000053 : Student : 3.12 : rrobinson : 
+Frederick Franklin : A10000054 : Student : 2.55 : ffranklin : 
+Arthur Adams : A10000055 : Student : 3.16 : aadams : 
+Benjamin Baker : A10000056 : Student : 3.17 : bbaker : 
+Ella Evans : A10000057 : Student : 3.07 : eevans : 
+John Kennedy : A10000058 : Student : 3.69 : jkennedy : 
+Thomas Thompson : A10000059 : Student : 2.22 : tthompson : 
+Jake Kennedy : A10000060 : Student : 2.05 : jkennedy1 : 
+Heather Harris : A10000061 : Student : 3.64 : hharris : 
+Diana Dixon : A10000062 : Student : 2.99 : ddixon : 
+Eric Evans : A10000063 : Student : 2.75 : eevans1 : 
+Carla Cioku : A10000064 : Student : 2.64 : ccioku : 
+Peter Parker : A10000065 : Student : 3.37 : pparker : 
+Steven Swift : A10000066 : Student : 2.82 : sswift : 
+Julia Kennedy : A10000067 : Student : 3.87 : jkennedy2 : 
+Samantha Swift : A10000068 : Student : 3.12 : sswift1 : 
+Lucas Lee : A10000069 : Student : 3.11 : llee : 
+Derek Dixon : A10000070 : Student : 3.93 : ddixon1 : 
+Tiffany Thompson : A10000071 : Student : 2.37 : tthompson1 : 
+Bethany Baker : A10000072 : Student : 3.11 : bbaker1 : 
+Michael Morris : A10000073 : Student : 3.07 : mmorris : 
+Patricia Parker : A10000074 : Student : 2.19 : pparker1 : 
+Linda Lee : A10000075 : Student : 3.76 : llee1 : 
+James Kennedy : A10000076 : Student : 2.76 : jkennedy3 : 
+Mary Morris : A10000077 : Student : 2.9 : mmorris1 : 
+Fiona Franklin : A10000078 : Student : 2.06 : ffranklin1 : 
+Amelia Adams : A10000079 : Student : 2.8 : aadams1 : 
+Henry Harris : A10000080 : Student : 3.28 : hharris1 : 
+Rachel Robinson : A10000081 : Student : 2.78 : rrobinson1 : 
+Cameron Cioku : A10000082 : Student : 2.31 : ccioku1 : 
+Jessica Kennedy : A10000083 : Student : 3.11 : jkennedy4 : 
+Kemal Ataturk : A10000084 : Student : 3.94 : kataturk : 

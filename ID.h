@@ -1,3 +1,6 @@
+#ifndef ID_H
+#define ID_H
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -15,3 +18,5 @@ class ID
     // Friend Decleration to OVERLOAD AND OUTPUT
     friend ostream &operator<<(ostream &os, const ID &id);
 };
+
+#endif

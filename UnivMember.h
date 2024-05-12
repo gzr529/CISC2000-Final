@@ -1,3 +1,6 @@
+#ifndef UNIVMEMBER_H
+#define UNIVMEMBER_H
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -15,8 +18,9 @@ class UnivMember
 
     public:
         UnivMember(const ID& id, const Name& name, const string& role);
-        void printMember(); //Prints All Members
-
+        
         // Friend Decleration to OVERLOAD AND OUTPUT
         friend ostream &operator<<(ostream &os, const UnivMember &member);
 };
+
+#endif

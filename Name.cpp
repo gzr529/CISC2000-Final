@@ -10,9 +10,9 @@ Name::Name()
 Name::Name(string &currentLine)
 {
     int commaPosition = currentLine.find(',');                   // Find Comma Position
-    int lastPosition = currentLine.length();                     // Find Last Letter Position
+    int lastPosition = currentLine.find('-');                    // Find Last Letter Position
     lname = currentLine.substr(0, commaPosition);                // From first Letter to Comma
-    fname = currentLine.substr(commaPosition + 1, lastPosition); // From Comma to Last Letter
+    fname = currentLine.substr(commaPosition + 1, ((lastPosition - 1) - commaPosition)); // From Comma to Last Letter
 }
 
 void Name::printName()
