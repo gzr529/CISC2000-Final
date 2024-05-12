@@ -24,6 +24,6 @@ void UnivMember::printMember()
 
 ostream &operator<<(ostream &os, const UnivMember &member)
 {
-    os << member.univRole << ": " << member.univName << " - ID: " << member.univID;
+    os << " : " << member.univName << " : " << member.univID << endl;
     return os;
 }

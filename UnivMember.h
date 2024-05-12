@@ -16,8 +16,6 @@ class UnivMember
     public:
         UnivMember(const ID& id, const Name& name, const string& role);
         void printMember(); //Prints All Members
-        const ID &getID() const { return univID; } //RETURN ID WHEN OVERLOADING
-        const Name &getName() const { return univName; } // RETURN NAME WHEN OVERLOADING
 
         // Friend Decleration to OVERLOAD AND OUTPUT
         friend ostream &operator<<(ostream &os, const UnivMember &member);

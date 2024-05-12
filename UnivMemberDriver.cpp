@@ -9,10 +9,12 @@ int main()
 {
     //Initalize Variables
 
-    string currentLine;                // Current Line we are reading
-    vector<UnivMember> uniMemberList;  // A Vector of Members of Class, UnivMemeber
-    vector<string> usernameFileVector; // A Vector to store Usernames to be Compared before Stored in File
-    int ProfessorCounter = 0;          // Number of Professors That Must be Skipped Since Professors are Processed Before Students
+    string currentLine;                 // Current Line we are reading
+    vector<UnivMember> uniMemberList;   // A Vector of Members of Class, UnivMemeber
+    vector<string> usernameFileVector;  // A Vector to store Usernames to be Compared before Stored in File
+    string tempUsername;                // Initalize Temp Username for Comparison Use
+    int ProfessorCounter = 0;           // Number of Professors That Must be Skipped Since Professors are Processed Before Students
+    int usernameCounter = 0;            // Number of Same Usernamer ; Initalized Now And Used Later
 
     // START OF PROFESSOR SECTION OF CODE ////////////////////////////////
 
@@ -77,6 +79,7 @@ int main()
 
     while (getline(studFile, currentLine))
     {
+
         // Where Usernames are Made
         int commaPosition = currentLine.find(",");  // Find Comma Position
         int lastPosition = currentLine.length();    // Find Last Letter Position
@@ -86,26 +89,27 @@ int main()
 
         // Make Usernames Lowercase (Use Transform Function)
         transform(currentUsername.begin(), currentUsername.end(), currentUsername.begin(), ::tolower);
+        
+        //Set Temp Username for Comparison
+        tempUsername = currentUsername;
 
-        // Initalize Temp Username for Comparison Use
-        string tempUsername = currentUsername;
+        // Reset Counter from Last Run of Dectecting Same Names
+        usernameCounter = 0;
 
         // Check Username Vector To See Match
         // Will Count Amount of Username Matches In Vector
         // Will Add Number to End of Name Accordingly
 
-        //Reset Counter for Number of Dectected Same Names
-        int usernameCounter = 0;
-
         for (int i = 0; i < usernameFileVector.size(); i++)
         {
-
             //Use Temp Username Here to not Effect Real Username
             if (tempUsername == usernameFileVector[i])
             {
+                // Add to Num of Same Usernames
                 usernameCounter++;
 
                 // To Match Value In Stored Output
+                tempUsername = currentUsername;
                 tempUsername += to_string(usernameCounter);
             }
         }
@@ -121,8 +125,11 @@ int main()
     //Overload Output To File
     for (int i = 0; i < (usernameFileVector.size()); i++)
     {
-        usernameFileOut << uniMemberList[i + ProfessorCounter].getName() << "," << usernameFileVector[i] << "," << uniMemberList[i + ProfessorCounter].getID() << endl;
+        usernameFileOut << usernameFileVector[i] << uniMemberList[i + ProfessorCounter];
     }
+
+
+    // Programs Old Output
 
     /*
     for (UnivMember Member : uniMemberList)
@@ -130,6 +137,8 @@ int main()
         //Member.UnivMember::printMember();
     }
     */
+
+    cout << "Program Output is to File 'StudentUsernames.txt'";
 
     studFile.close();
     usernameFileOut.close();
